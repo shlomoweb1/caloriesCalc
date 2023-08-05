@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <title>מחשבון קלריות</title>
+</head>
+
+<body>
+    <div class="wrapperCaloriesCalc">
+        <div class="wrapperLogo">
+            <img src="assets/logo.png" class="CaloriesCalcLogo" />
+        </div>
+        <div class="wrapperInput">
+            <button class="CaloriesCalFwd">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="currentColor" fill-rule="evenodd"
+                        d="M10.53 5.47a.75.75 0 0 1 0 1.06l-4.72 4.72H20a.75.75 0 0 1 0 1.5H5.81l4.72 4.72a.75.75 0 1 1-1.06 1.06l-6-6a.75.75 0 0 1 0-1.06l6-6a.75.75 0 0 1 1.06 0Z"
+                        clip-rule="evenodd" />
+                </svg>
+            </button>
+            <button class="CaloriesCalBack">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="currentColor" fill-rule="evenodd"
+                        d="M13.47 5.47a.75.75 0 0 1 1.06 0l6 6a.75.75 0 0 1 0 1.06l-6 6a.75.75 0 1 1-1.06-1.06l4.72-4.72H4a.75.75 0 0 1 0-1.5h14.19l-4.72-4.72a.75.75 0 0 1 0-1.06Z"
+                        clip-rule="evenodd" />
+                </svg>
+            </button>
+            <button class="CaloriesCalSubmit">חשב!</button>
+            <input type="text" placeholder="חיפוש" class="CaloriesCalSearchInput" />
+            <div id="results" class=""></div>
+        </div>
+        <div class="CaloriesCalOutput">
+            <!-- <h2 class="title">שם המוצר</h2> -->
+            <div class="label" data-field="shmmitzrach">--</div>
+            <div class="row">
+                <div>
+                    <h2 class="">קלריות</h2>
+                    <div class="label" data-field="food_energy" data-null="--לא נמצא--">--</div>
+                </div>
+                <div>
+                    <h2 class="">פחמימות</h2>
+                    <div class="label" data-field="carbohydrates">--</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="">
+                    <h2 class="">חלבונים</h2>
+                    <div class="label" data-field="protein">--</div>
+                </div>
+                <div class="">
+                    <h2 class="">שומנים</h2>
+                    <div class="label" data-field="total_fat">--</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="">
+                    <h2 class="">סיבים תזונתיים</h2>
+                    <div class="label" data-field="total_dietary_fiber">--</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

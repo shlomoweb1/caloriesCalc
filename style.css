@@ -1,0 +1,159 @@
+div.wrapperCaloriesCalc {
+    width: 650px;
+    margin: 0 auto;
+    background-color: #1185A3;
+    border-radius: 35px;
+    direction: rtl;
+    padding-bottom: 35px;
+}
+
+div.wrapperLogo {
+    text-align: center;
+}
+
+div.wrapperLogo img.CaloriesCalcLogo {
+    width: 200px;
+}
+
+.wrapperInput {
+    position: relative;
+}
+
+.wrapperInput .CaloriesCalSearchInput {
+    width: 475px;
+    margin: 0px 25px;
+    height: 2.2rem;
+    border-radius: 35px;
+    border-color: transparent;
+    padding-right: 125px;
+    font-size: 18px;
+}
+
+.wrapperInput .CaloriesCalSearchInput:focus,
+.wrapperInput .CaloriesCalSearchInput:focus-visible {
+    outline: none;
+}
+
+.wrapperInput button.CaloriesCalFwd,
+.wrapperInput button.CaloriesCalBack,
+.wrapperInput .CaloriesCalSubmit {
+    font-size: 28px;
+    background-color: transparent;
+    border: transparent;
+    position: absolute;
+}
+
+.wrapperInput button.CaloriesCalFwd {
+    top: 5px;
+    right: 80px;
+    color: #DBDBDB;
+}
+
+.wrapperInput button.CaloriesCalBack {
+    top: 5px;
+    right: 40px;
+    color: #DBDBDB;
+}
+
+.wrapperInput button.CaloriesCalSubmit {
+    left: 35px;
+    top: 5px;
+    background-color: #DBDBDB;
+    border-radius: 50px;
+    padding: 5px 10px;
+    font-size: 18px;
+}
+
+div.wrapperCaloriesCalc .CaloriesCalOutput {
+    /* height: 600px;  */
+    background-color: #FFF;
+    width: 600px;
+    margin: 15px 25px 0px;
+    border-radius: 35px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    /* height: 0px;
+    display: none; */
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.CaloriesCalOutput .title,
+.CaloriesCalOutput .label {
+    text-align: center;
+}
+
+.CaloriesCalOutput .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 150px;
+
+}
+
+.CaloriesCalOutput .row>div>h2,
+.CaloriesCalOutput .row>div>div,
+.CaloriesCalOutput>div.label {
+    display: none;
+}
+
+.CaloriesCalOutput.show .row>div>h2,
+.CaloriesCalOutput.show .row>div>div,
+.CaloriesCalOutput.show >div.label {
+    display: block;
+}
+
+#results {
+    position: absolute;
+    opacity: 0;
+    height: 0px;
+    z-index: -999
+}
+
+#results.show {
+    opacity: 1;
+    height: 400px;
+    overflow-y: auto;
+    background-color: #FFF;
+    width: 420px;
+    margin: 10px 120px;
+    border: 1px solid red;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    /* Adding a box shadow */
+    transition: opacity 3s ease, height 3s ease-out;
+    z-index: 0;
+}
+
+#results.show ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    overflow: hidden;
+    height: 100%;
+}
+
+#results.show ul li {
+    padding: 12px 8px;
+    cursor: pointer;
+    border-bottom: 1px solid #ccc;
+}
+
+#results.show ul li:hover {
+    background-color: #1185A3;
+    color: #FFF;
+    transition: background-color 1s ease;
+}
+
+#results.show ul li span.highlight, div[data-field="shmmitzrach"] span.highlight{
+    color: #FF0000;
+}
+
+#results.show ul li:hover  span.highlight{
+    color: #FFFF00;
+}
