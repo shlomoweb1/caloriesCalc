@@ -148,7 +148,14 @@ class CaloriesCalc {
     }
 
     filter(query = this.data.filter.q){
-        return this.data.data.result.records.filter(x => x.shmmitzrach.match(new RegExp(query.split(' ').join('|'), 'i')));
+        const searchWords = query.split(' ');
+        const filteredItems = this.data.data.result.records.filter(item => {
+            return searchWords.every(word => {
+                const regex = new RegExp(word, 'i');
+                return item.shmmitzrach.match(regex);
+            });
+        });
+        return filteredItems;
     }
 
     selectCaleroies(index, containerElement, skipHistory) {
