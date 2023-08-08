@@ -74,8 +74,6 @@ div.wrapperCaloriesCalc .CaloriesCalOutput {
     border-radius: 35px;
     padding-bottom: 10px;
     padding-top: 10px;
-    /* height: 0px;
-    display: none; */
     height: 400px;
     display: flex;
     flex-direction: column;
@@ -138,6 +136,7 @@ div.wrapperCaloriesCalc .CaloriesCalOutput {
     background-color: #fff;
     overflow: hidden;
     height: 100%;
+    overflow: auto;
 }
 
 #results.show ul li {
